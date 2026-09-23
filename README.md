@@ -2,10 +2,9 @@
 Web run OS\
 
 Deadpool!\
-Deadpool themed as well.\
+Deadpool themed as well.
 
 Features:\
-    Background music\
     Draggable windows\
     Deadpool quiz\
     RNG spin\
@@ -14,6 +13,5 @@ Features:\
     Live clock\
 
 I love my background as well found it online creds to WallpaperAccess\
-Music creds: mp3.pm\
 
 Made for Stardance
