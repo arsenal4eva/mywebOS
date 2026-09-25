@@ -344,7 +344,7 @@ function initRng() {
     if (rngSpinning) return;
     rngSpinning = true;
     spinBtn.disabled = true;
-    epEl.textContent = '??? CP';
+    epEl.textContent = '??? XP';
     badgesEl.innerHTML = '';
     commentEl.textContent = 'Rolling...';
     reels.forEach((r) => { r.classList.remove('locked'); r.classList.add('spinning'); });
@@ -373,7 +373,7 @@ function initRng() {
 
     let shown = 0;
     const step = Math.max(1, Math.floor(total / 30));
-    epEl.textContent = '0 CP';
+    epEl.textContent = '0 XP';
     const t = setInterval(() => {
       shown += step;
       if (shown >= total) { shown = total; clearInterval(t); }
