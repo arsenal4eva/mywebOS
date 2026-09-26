@@ -1,134 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DeadpoolOS</title>
-    <link rel="stylesheet" type="text/css" href="./style.css" />
-    <script type="module" src="./script.js"></script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>DeadpoolOS</title>
+<link rel="stylesheet" type="text/css" href="./style.css" />
+<script src="./script.js" defer></script>
 </head>
 
 <body>
 
-    <header class="topbar">
-        <div id="welcomeopen" title="Open Wade's HQ">DEADPOOL OS</div>
+<header class="topbar">
+<div id="welcomeopen" data-open="welcome" title="Open Wade's HQ">DEADPOOL OS</div>
 
-        <div class="clock-container" id="live-clock">Loading time...</div>
-    </header>
+<div class="clock-container" id="live-clock">Loading time...</div>
+</header>
 
-    <main class="desktop">
-        <section class="window" id="welcome" style="top: 12%; left: 50%; transform: translate(-50%, 0);">
-            <div class="window-header" id="welcomeheader">
-                <span class="window-title">Welcome!</span>
-                <div class="window-controls">
-                    <button class="win-btn minimize" data-minimize="welcome" title="Minimize">—</button>
-                    <button class="win-btn close" id="welcomeclose" data-close="welcome" title="Close">✕</button>
-                </div>
-            </div>
-            <div class="window-body">
-                <h3 class="hero-heading">Hey, Pool-head! You broke the 4th wall too?</h3>
-                <p class="subtitle">Welcome to DeadpoolOS. Yes, I know I'm in a browser window. No, I won't stop talking about it.</p>
-                <img src="./deadpool.png" alt="Deadpool" style="object-fit: contain; width: 100%; height: auto; max-height: 240px;" />
-            </div>
-        </section>
+<main class="desktop">
+<section class="window" id="welcome" style="top: 12%; left: 50%; transform: translate(-50%, 0);">
+<div class="window-header" id="welcomeheader">
+<span class="window-title">Welcome!</span>
+<div class="window-controls">
+<button class="win-btn minimize" data-minimize="welcome" title="Minimize">—</button>
+<button class="win-btn close" id="welcomeclose" data-close="welcome" title="Close">✕</button>
+</div>
+</div>
+<div class="window-body">
+<h3 class="hero-heading">Hey, Pool-head! You broke the 4th wall too?</h3>
+<p class="subtitle">Welcome to DeadpoolOS. Yes, I know I'm in a browser window. No, I won't stop talking about it.</p>
+<img src="./deadpool.png" alt="Deadpool" class="welcome-img" />
+</div>
+</section>
 
-        <section class="window" id="heroes" style="top: 26%; left: 6%; display: none;">
-            <div class="window-header" id="heroesheader">
-                <span class="window-title"> Crew </span>
-                <div class="window-controls">
-                    <button class="win-btn minimize" data-minimize="heroes" title="Minimize">—</button>
-                    <button class="win-btn close" data-close="heroes" title="Close">✕</button>
-                </div>
-            </div>
-            <div class="window-body">
-                <ul class="hero-list">
-                    <li><strong>Wade Wilson</strong> — Handsome, funny, immortal-ish</li>
-                    <li><strong>Cable</strong> — Grumpy time-dad with a big gun</li>
-                    <li><strong>Domino</strong> — Luckiest lady, tolerates me somehow</li>
-                    <li><strong>Wolverine</strong> — Best frenemy. Short. Stabby. seconde-moi?</li>
-                    <li><strong>Blind Al</strong> — Roommate. Cocaine? Kidding. (Or am I?)</li>
-                    <li><strong>Bob, Agent of HYDRA</strong> — Hostage. Friend. Hostage-friend.</li>
-                </ul>
-            </div>
-        </section>
+<section class="window" id="heroes" style="top: 26%; left: 6%; display: none;">
+<div class="window-header" id="heroesheader">
+<span class="window-title"> Crew </span>
+<div class="window-controls">
+<button class="win-btn minimize" data-minimize="heroes" title="Minimize">—</button>
+<button class="win-btn close" data-close="heroes" title="Close">✕</button>
+</div>
+</div>
+<div class="window-body">
+<ul class="hero-list">
+<li><strong>Wade Wilson</strong> — Handsome, funny, immortal-ish</li>
+<li><strong>Cable</strong> — Grumpy time-dad with a big gun</li>
+<li><strong>Domino</strong> — Luckiest lady, tolerates me somehow</li>
+<li><strong>Wolverine</strong> — Best frenemy. Short. Stabby. seconde-moi?</li>
+<li><strong>Blind Al</strong> — Roommate. Cocaine? Kidding. (Or am I?)</li>
+<li><strong>Bob, Agent of HYDRA</strong> — Hostage. Friend. Hostage-friend.</li>
+</ul>
+</div>
+</section>
 
-        <section class="window" id="quotes" style="top: 38%; left: 60%; display: none;">
-            <div class="window-header" id="missionsheader">
-                <span class="window-title"> Best Quotes </span>
-                <div class="window-controls">
-                    <button class="win-btn minimize" data-minimize="quotes" title="Minimize">—</button>
-                    <button class="win-btn close" data-close="quotes" title="Close">✕</button>
-                </div>
-            </div>
-            <div class="window-body">
-                <p>1. "I'm the Messiah. I am Marvel Jesus." -  Deadpool and Wolverine(2024)</p>
-                <p>2. "Welcome to the MCU, by the way. You're joining at a bit of a low point." — Deadpool and Wolverine(2024)</p>
-                <p>3. "You may be wondering why the red suit. Well, that's so bad guys won't see me bleed." — Deadpool (2016)</p>
-                <p>4. "McAvoy or Stewart? These timelines are so confusing." — Deadpool 2 (2018)</p>
-                <p>5. "Suck it, Fox, I'm going to Disneyland!" — Deadpool and Wolverine (2024)</p>
-            </div>
-        </section>
+<section class="window" id="quotes" style="top: 38%; left: 60%; display: none;">
+<div class="window-header" id="quotesheader">
+<span class="window-title"> Best Quotes </span>
+<div class="window-controls">
+<button class="win-btn minimize" data-minimize="quotes" title="Minimize">—</button>
+<button class="win-btn close" data-close="quotes" title="Close">✕</button>
+</div>
+</div>
+<div class="window-body">
+<p>1. "I'm the Messiah. I am Marvel Jesus." -  Deadpool and Wolverine(2024)</p>
+<p>2. "Welcome to the MCU, by the way. You're joining at a bit of a low point." — Deadpool and Wolverine(2024)</p>
+<p>3. "You may be wondering why the red suit. Well, that's so bad guys won't see me bleed." — Deadpool (2016)</p>
+<p>4. "McAvoy or Stewart? These timelines are so confusing." — Deadpool 2 (2018)</p>
+<p>5. "Suck it, Fox, I'm going to Disneyland!" — Deadpool and Wolverine (2024)</p>
+</div>
+</section>
 
-        <section class="window quiz-window" id="quiz" style="top: 20%; left: 18%; display: none;">
-            <div class="window-header" id="quizheader">
-                <span class="window-title">Deadpool Quiz</span>
-                <div class="window-controls">
-                    <button class="win-btn minimize" data-minimize="quiz" title="Minimize">—</button>
-                    <button class="win-btn close" data-close="quiz" title="Close">✕</button>
-                </div>
-            </div>
-            <div class="window-body">
-                <div class="quiz-top">
-                    <span id="quiz-progress">Question 1/6</span>
-                    <span id="quiz-score">Score: 0 </span>
-                </div>
-                <div class="quiz-bar"><div class="quiz-bar-fill" id="quiz-bar-fill"></div></div>
-                <h3 id="quiz-question">Loading...</h3>
-                <div id="quiz-options" class="quiz-options"></div>
-                <p id="quiz-feedback" class="quiz-feedback"></p>
-                <div class="quiz-actions">
-                    <button id="quiz-next" class="action-btn" disabled>Next ➜</button>
-                    <button id="quiz-restart" class="action-btn ghost">Restart</button>
-                </div>
-            </div>
-        </section>
+<section class="window quiz-window" id="quiz" style="top: 20%; left: 18%; display: none;">
+<div class="window-header" id="quizheader">
+<span class="window-title">Deadpool Quiz</span>
+<div class="window-controls">
+<button class="win-btn minimize" data-minimize="quiz" title="Minimize">—</button>
+<button class="win-btn close" data-close="quiz" title="Close">✕</button>
+</div>
+</div>
+<div class="window-body">
+<div class="quiz-top">
+<span id="quiz-progress">Question 1/6</span>
+<span id="quiz-score">Score: 0 </span>
+</div>
+<div class="quiz-bar"><div class="quiz-bar-fill" id="quiz-bar-fill"></div></div>
+<h3 id="quiz-question">Loading...</h3>
+<div id="quiz-options" class="quiz-options"></div>
+<p id="quiz-feedback" class="quiz-feedback"></p>
+<div class="quiz-actions">
+<button id="quiz-next" class="action-btn" disabled>Next ➜</button>
+<button id="quiz-restart" class="action-btn ghost">Restart</button>
+</div>
+</div>
+</section>
 
-        <section class="window rng-window" id="rng" style="top: 16%; left: 52%; display: none;">
-            <div class="window-header" id="rngheader">
-                <span class="window-title"> RNG 6-digit Roller</span>
-                <div class="window-controls">
-                    <button class="win-btn minimize" data-minimize="rng" title="Minimize">—</button>
-                    <button class="win-btn close" data-close="rng" title="Close">✕</button>
-                </div>
-            </div>
-            <div class="window-body">
-                <p class="subtitle" style="color: #d9cfae; margin-top: 0;">6 digit spin let's see how rare you can get</p>
-                <div class="reels" id="rng-reels" aria-live="polite">
-                    <span class="reel">?</span><span class="reel">?</span><span class="reel">?</span><span class="reel">?</span><span class="reel">?</span><span class="reel">?</span>
-                </div>
-                <div class="rng-stats">
-                    <span id="rng-ep">??? XP</span>
-                    <span id="rng-rolls">Rolls: 0</span>
-                </div>
-                <p id="rng-comment" class="rng-comment">Press SPIN, beautiful. Daddy needs a palindrome.</p>
-                <div id="rng-badges" class="badge-row rng-badges"></div>
-                <div class="quiz-actions">
-                    <button id="rng-spin" class="action-btn big-spin"> SPIN </button>
-                    <button id="rng-copy" class="action-btn ghost">Copy</button>
-                </div>
-                <h4 class="history-title"> Roll History</h4>
-                <ol id="rng-history" class="rng-history"></ol>
-            </div>
-        </section>
-    </main>
+<section class="window rng-window" id="rng" style="top: 16%; left: 52%; display: none;">
+<div class="window-header" id="rngheader">
+<span class="window-title"> RNG 6-digit Roller</span>
+<div class="window-controls">
+<button class="win-btn minimize" data-minimize="rng" title="Minimize">—</button>
+<button class="win-btn close" data-close="rng" title="Close">✕</button>
+</div>
+</div>
+<div class="window-body">
+<p class="subtitle">6 digit spin let's see how rare you can get</p>
+<div class="reels" id="rng-reels" aria-live="polite">
+<span class="reel">?</span><span class="reel">?</span><span class="reel">?</span><span class="reel">?</span><span class="reel">?</span><span class="reel">?</span>
+</div>
+<div class="rng-stats">
+<span id="rng-ep">??? CP</span>
+<span id="rng-rolls">Rolls: 0</span>
+</div>
+<p id="rng-comment" class="rng-comment">Press SPIN, beautiful. Daddy needs a palindrome.</p>
+<div id="rng-badges" class="badge-row rng-badges"></div>
+<div class="quiz-actions">
+<button id="rng-spin" class="action-btn big-spin"> SPIN </button>
+<button id="rng-copy" class="action-btn ghost">Copy</button>
+</div>
+<h4 class="history-title"> Roll History</h4>
+<ol id="rng-history" class="rng-history"></ol>
+</div>
+</section>
+</main>
 
-    <footer class="dock">
-        <button class="dock-btn" data-open="welcome">Welcome</button>
-        <button class="dock-btn" data-open="quiz">Quiz</button>
-        <button class="dock-btn" data-open="rng">RNG</button>
-        <button class="dock-btn" data-open="heroes">Crew</button>
-        <button class="dock-btn" data-open="quotes">Quotes</button>
-    </footer>
+<footer class="dock">
+<button class="dock-btn" data-open="welcome">Welcome</button>
+<button class="dock-btn" data-open="quiz">Quiz</button>
+<button class="dock-btn" data-open="rng">RNG</button>
+<button class="dock-btn" data-open="heroes">Crew</button>
+<button class="dock-btn" data-open="quotes">Quotes</button>
+</footer>
 </body>
 </html>
 

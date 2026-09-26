@@ -25,17 +25,11 @@ function initWindows() {
     makeDraggable(win);
   });
 
-  document.querySelectorAll('[data-close]').forEach((btn) => {
+  document.querySelectorAll('[data-close], [data-minimize]').forEach((btn) => {
     btn.addEventListener('click', (e) => {
       e.stopPropagation();
-      closeWindow(document.getElementById(btn.dataset.close));
-    });
-  });
-
-  document.querySelectorAll('[data-minimize]').forEach((btn) => {
-    btn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      closeWindow(document.getElementById(btn.dataset.minimize));
+      const id = btn.dataset.close || btn.dataset.minimize;
+      closeWindow(document.getElementById(id));
     });
   });
 
@@ -44,15 +38,6 @@ function initWindows() {
       openWindow(document.getElementById(btn.dataset.open));
     });
   });
-
-  const legacyOpen = document.getElementById('welcomeopen');
-  if (legacyOpen && !legacyOpen.hasAttribute('data-open')) {
-    legacyOpen.addEventListener('click', () => openWindow(document.getElementById('welcome')));
-  }
-  const legacyClose = document.getElementById('welcomeclose');
-  if (legacyClose && !legacyClose.hasAttribute('data-close')) {
-    legacyClose.addEventListener('click', () => closeWindow(document.getElementById('welcome')));
-  }
 }
 
 function focusWindow(win) {
@@ -186,7 +171,7 @@ function initQuiz() {
     const item = QUIZ[quizIndex];
     qEl.textContent = item.q;
     progEl.textContent = `Question ${quizIndex + 1}/${total}`;
-    scoreEl.textContent = `Score: ${quizScore} `;
+    scoreEl.textContent = `Score: ${quizScore}`;
     barFill.style.width = `${(quizIndex / total) * 100}%`;
     fbEl.textContent = '';
     nextBtn.disabled = true;
@@ -218,7 +203,7 @@ function initQuiz() {
       buttons[item.answer].classList.add('correct');
       fbEl.textContent = ` Nope! ${item.quip}`;
     }
-    scoreEl.textContent = `Score: ${quizScore} `;
+    scoreEl.textContent = `Score: ${quizScore}`;
     nextBtn.disabled = false;
   }
 
@@ -231,19 +216,19 @@ function initQuiz() {
       title = 'Perfect score!';
       msg = 'HUGE Deadpool fan?';
     } else if (quizScore >= 4) {
-      title = ` ${quizScore}/${total} — Well that's fine`;
+      title = `${quizScore}/${total} — Well that's fine`;
       msg = 'Mid';
     } else if (quizScore >= 2) {
-      title = ` ${quizScore}/${total} - A bit disappointing isn't it?`;
+      title = `${quizScore}/${total} - A bit disappointing isn't it?`;
       msg = 'Are you kidding me?';
     } else {
-      title = ` ${quizScore}/${total} — Trash`;
+      title = `${quizScore}/${total} — Trash`;
       msg = 'Hit restart and redeem yourself, beautiful.';
     }
     qEl.textContent = title;
     optsEl.innerHTML = '';
     fbEl.textContent = msg;
-    scoreEl.textContent = `Score: ${quizScore} `;
+    scoreEl.textContent = `Score: ${quizScore}`;
     nextBtn.disabled = true;
   }
 
@@ -300,7 +285,6 @@ function analyzeNumber(s) {
   if (s.includes('13')) badges.push({ label: ' 13 — unlucky-ish', cp: 13 });
   if (s.includes('007')) badges.push({ label: ' 007 — Bond, Wade Bond', cp: 70 });
   if (s.includes('420')) badges.push({ label: ' 420 — hehe', cp: 42 });
-  if (s === '000000' || s === '999999') badges.push({ label: ' VOID / MAX — touch grass', cp: 400 });
   if (isPrime(n)) badges.push({ label: ' Prime number!', cp: 80 });
 
   const sum = digits.reduce((a, b) => a + b, 0);
@@ -344,7 +328,7 @@ function initRng() {
     if (rngSpinning) return;
     rngSpinning = true;
     spinBtn.disabled = true;
-    epEl.textContent = '??? XP';
+    epEl.textContent = '??? CP';
     badgesEl.innerHTML = '';
     commentEl.textContent = 'Rolling...';
     reels.forEach((r) => { r.classList.remove('locked'); r.classList.add('spinning'); });
@@ -373,7 +357,7 @@ function initRng() {
 
     let shown = 0;
     const step = Math.max(1, Math.floor(total / 30));
-    epEl.textContent = '0 XP';
+    epEl.textContent = '0 CP';
     const t = setInterval(() => {
       shown += step;
       if (shown >= total) { shown = total; clearInterval(t); }
